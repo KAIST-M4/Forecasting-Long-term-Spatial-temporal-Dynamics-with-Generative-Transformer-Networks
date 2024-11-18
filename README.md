@@ -2,14 +2,14 @@
 
 ## Code Overview
 we introduce **DynamicGPT**, a generative model designed specifically for **dynamic** modeling by integrating **G**enerative learning with a **P**re-trained multi-scale kernel-based autoencoder and a vision **T**ansformer framework’. DynamicGPT distinguishes itself by predicting long-term spatiotemporal responses without the need for physical constraints or governing equations, unlike physics-informed neural networks (PINN). The core of this code is the combination of **conditional Generative Adversarial Networks (cGANs)** and **Vision Transformers (ViT)** for long-term spatiotemporal prediction across various scientific and engineering applications such as **crack propagation in composite material**, **3D reaction diffusion**, **unsteady flow** and **climate science** as shown **Figure 1**. The framework trains a **cGAN model** to generate synthetic data and a **Vision Transformer (ViT)** model to predict spatiotemporal dynamics over time. The models are designed to handle large spatial and temporal data, making them suitable for tasks involving **scientific simulations** and **real-world predictions**.
+![CoverLetterF](https://github.com/user-attachments/assets/8d87ca89-d827-4ccf-ac5b-1c7a75bff6f9)
+![CoverLetterFigure1](https://github.com/user-attachments/assets/9e175b01-ad90-41c3-9a13-200c75873704)
 
 ## Supported Scenarios (Configurations of optimized hyper paramters):
-- **crack_propagation**: Used for modeling the progression of cracks in materials.
-- **3D_reaction_diffusion**: Simulates reaction-diffusion processes in 3D environments.
-- **flow_past_cylinder**: Models fluid dynamics around objects like cylinders.
-- **climate_science**: Simulates and forecasts climate-related data, such as temperature and precipitation patterns.
-
-![CoverLetterFigure1](https://github.com/user-attachments/assets/9e175b01-ad90-41c3-9a13-200c75873704)
+- **crack_propagation**: Used for modeling the progression of cracks in composite materials, even for configurations outside the training data distribution, demonstrating its robustness and generalization capabilities.
+- **3D_reaction_diffusion**: Simulates reaction-diffusion processes in 3D environments, handling complex 3D data with high accuracy, showcasing its scalability and adaptability to high-dimensional spatiotemporal problems.
+- **flow_past_cylinder**: Models fluid dynamics around objects like cylinders, including turbulent flows and Rayleigh-Bénard convection, which are critical for engineering safety and efficiency.
+- **climate_science**: Simulates and forecasts climate-related data, such as sea surface temperature patterns, capturing seasonal and long-term trends, essential for climate modeling and forecasting phenomena like El Niño.
 
 ## Requirements:
 - **TensorFlow** (>= 2.6)
@@ -36,7 +36,6 @@ python main.py climate_science
 ```
 
 ## Code Structure
-
 - **main.py**: The main script to train and test the models. It takes a scenario as input (e.g., `climate_science`) and executes the training process.
 - **gan_trainer.py**: Defines the `GANTrainer` class, which is responsible for handling the training of the generator and discriminator models within the GAN framework.
 - **discriminator.py**: Contains the `Discriminator` class, which is used in GANs to classify whether the input data is real or generated.
