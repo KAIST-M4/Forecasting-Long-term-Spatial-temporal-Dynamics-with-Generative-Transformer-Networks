@@ -11,7 +11,7 @@ The framework trains a **GAN model** to generate synthetic data and a **Vision T
 - **Scenario-Based Configurations**: Configurations for various scientific and engineering scenarios (e.g., climate science, crack propagation, reaction diffusion, etc.).
 - **Visualization**: Visualization of the results, comparing true data with predicted data, including error metrics.
 
-## Supported Scenarios (Configuration:
+## Supported Scenarios (Configurations of optimized hyper paramters):
 - **crack_propagation**: Used for modeling the progression of cracks in materials.
 - **3D_reaction_diffusion**: Simulates reaction-diffusion processes in 3D environments.
 - **flow_past_cylinder**: Models fluid dynamics around objects like cylinders.
@@ -26,5 +26,18 @@ The framework trains a **GAN model** to generate synthetic data and a **Vision T
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/spatiotemporal-forecasting.git
-cd spatiotemporal-forecasting
+git clone https://github.com/DonggeunPark/DynamicGPT.git
+```
+
+### 2. Navigate into the project folder and create the Conda environment from "DynamciGPT.yml":
+```bash
+cd DynamicGPT
+conda env create -f DynamicGPT.yml
+conda activate DynamicGPT
+```
+
+### 3. Run and enjoy **DynamicGPT** (training, inference, visualization)
+```bash
+python main.py climate_science
+```
+
