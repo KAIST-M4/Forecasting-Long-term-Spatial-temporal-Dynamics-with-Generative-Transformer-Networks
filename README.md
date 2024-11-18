@@ -1,9 +1,7 @@
 # Spatiotemporal Vision Transformer for Forecasting Dynamics
 
 ## Code Overview
-This project aims to forecast long-term spatiotemporal dynamics using **Generative Transformer Networks** (GTNs). The core of this code is the combination of **conditional Generative Adversarial Networks (cGANs)** and **Vision Transformers (ViT)** for long-term spatiotemporal prediction across various scientific and engineering applications such as **climate science**, **crack propagation in composite material**, and **3D reaction diffusion** as shown **Figure 1**.
-
-The framework trains a **cGAN model** to generate synthetic data and a **Vision Transformer (ViT)** model to predict spatiotemporal dynamics over time. The models are designed to handle large spatial and temporal data, making them suitable for tasks involving **scientific simulations** and **real-world predictions**.
+we introduce **DynamicGPT**, a generative model designed specifically for **dynamic** modeling by integrating **G**enerative learning with a **P**re-trained multi-scale kernel-based autoencoder and a vision **T**ansformer framework’. DynamicGPT distinguishes itself by predicting long-term spatiotemporal responses without the need for physical constraints or governing equations, unlike physics-informed neural networks (PINN). The core of this code is the combination of **conditional Generative Adversarial Networks (cGANs)** and **Vision Transformers (ViT)** for long-term spatiotemporal prediction across various scientific and engineering applications such as **crack propagation in composite material**, **3D reaction diffusion**, **unsteady flow** and **climate science** as shown **Figure 1**. The framework trains a **cGAN model** to generate synthetic data and a **Vision Transformer (ViT)** model to predict spatiotemporal dynamics over time. The models are designed to handle large spatial and temporal data, making them suitable for tasks involving **scientific simulations** and **real-world predictions**.
 
 ## Supported Scenarios (Configurations of optimized hyper paramters):
 - **crack_propagation**: Used for modeling the progression of cracks in materials.
