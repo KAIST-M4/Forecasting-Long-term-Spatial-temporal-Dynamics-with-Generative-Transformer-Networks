@@ -65,3 +65,6 @@ project/
 │   ├── SST_train-y.npy
 ├── main.py
 ```
+
+## Summary of optimized DynamicGPT's architecture
+![Supple figure 8](https://github.com/user-attachments/assets/a0adf687-b44c-465e-807c-07906529bb97)
