@@ -5,17 +5,13 @@ This project aims to forecast long-term spatiotemporal dynamics using **Generati
 
 The framework trains a **cGAN model** to generate synthetic data and a **Vision Transformer (ViT)** model to predict spatiotemporal dynamics over time. The models are designed to handle large spatial and temporal data, making them suitable for tasks involving **scientific simulations** and **real-world predictions**.
 
-## Key Features in DynamicGPT.py (Main python file):
-- **conditional GAN-based Generator and Discriminator Models**: Used for generating synthetic data and training the discriminator to differentiate between real and generated data.
-- **Spatiotemporal Vision Transformer (ViT)**: A Transformer-based model that processes spatial and temporal dynamics simultaneously for tasks such as forecasting and prediction.
-- **Scenario-Based Configurations**: Configurations for various scientific and engineering scenarios (e.g., climate science, crack propagation, reaction diffusion, etc.).
-- **Visualization**: Visualization of the results, comparing true data with predicted data, including error metrics.
-
 ## Supported Scenarios (Configurations of optimized hyper paramters):
 - **crack_propagation**: Used for modeling the progression of cracks in materials.
 - **3D_reaction_diffusion**: Simulates reaction-diffusion processes in 3D environments.
 - **flow_past_cylinder**: Models fluid dynamics around objects like cylinders.
 - **climate_science**: Simulates and forecasts climate-related data, such as temperature and precipitation patterns.
+
+![CoverLetterFigure1](https://github.com/user-attachments/assets/9e175b01-ad90-41c3-9a13-200c75873704)
 
 ## Requirements:
 - **TensorFlow** (>= 2.6)
