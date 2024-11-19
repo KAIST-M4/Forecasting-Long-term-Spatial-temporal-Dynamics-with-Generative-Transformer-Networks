@@ -102,7 +102,7 @@ X = np.vstack((X1,X2))
 Y = np.vstack((Y1,Y2))
 
 dataset = tf.data.Dataset.from_tensor_slices((X, Y))
-dataset = dataset.batch(4)
+dataset = dataset.batch(4) #(Adjust the batch size for your case)
 
 # Train the models using the GANTrainer
 print("Training cGAN model...")
@@ -123,7 +123,7 @@ vit_config = ViTConfig(**config["vit_config"])
 vit_model = SpatiotemporalViT(vit_config)
 
 # Set batch size and max patches
-batch_size = 4
+batch_size = 4 #(Adjust the batch size for your case)
 max_patches = config["vit_config"]["max_patches"]
 data_preprocessor = DataPreprocessor(batch_size=batch_size, max_patches=max_patches, patch_shape=config["vit_config"]["patch_shape"])
 
@@ -135,7 +135,7 @@ model_compiler.compile_model()
 print("ViT model compiled successfully!")
 
 # Train the ViT model
-epochs = 10
+epochs = 1000 #(Adjust the number of epochs for your case)
 print(f"Training ViT model for {epochs} epochs...")
 vit_model.fit(dataset, epochs=epochs)
 print("ViT training completed!")
