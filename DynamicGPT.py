@@ -89,11 +89,17 @@ trainer = GANTrainer(generator, discriminator, learning_rate=2e-4, beta_1=0.5)
 
 # Load dataset and prepare for training
 module_dir = os.path.join(os.path.dirname(__file__), 'Results')
-npy_file_pathX = os.path.join(module_dir, 'SST_train_x.npy')
-npy_file_pathY = os.path.join(module_dir, 'SST_train_y.npy')
+npy_file_pathX1 = os.path.join(module_dir, 'SST_x1.npy')
+npy_file_pathY1 = os.path.join(module_dir, 'SST_y1.npy')
+npy_file_pathX2 = os.path.join(module_dir, 'SST_x2.npy')
+npy_file_pathY2 = os.path.join(module_dir, 'SST_y2.npy')
+X1 = np.load(npy_file_pathX1)
+Y1 = np.load(npy_file_pathY1)
+X2 = np.load(npy_file_pathX2)
+Y2 = np.load(npy_file_pathY2)
 
-X = np.load(npy_file_pathX)
-Y = np.load(npy_file_pathY)
+X = np.vstack((X1,X2))
+Y = np.vstack((Y1,Y2))
 
 dataset = tf.data.Dataset.from_tensor_slices((X, Y))
 dataset = dataset.batch(4)
