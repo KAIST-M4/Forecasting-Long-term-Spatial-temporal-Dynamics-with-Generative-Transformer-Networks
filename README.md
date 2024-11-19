@@ -1,5 +1,6 @@
-# Spatiotemporal Vision Transformer for Forecasting Dynamics
+# Forecasting Long-term Spatial-temporal Dynamics with Generative Transformer Networks
 
+![License](https://img.shields.io/badge/license-MIT-green)
 ## Code Overview
 We introduce **DynamicGPT**, a generative model designed specifically for **dynamic** modeling by integrating **G**enerative learning with a **P**re-trained multi-scale kernel-based autoencoder and a vision **T**ansformer framework’. DynamicGPT distinguishes itself by predicting long-term spatiotemporal responses without the need for physical constraints or governing equations, unlike physics-informed neural networks (PINN). The core of this code is the combination of **conditional Generative Adversarial Networks (cGANs)** and **Vision Transformers (ViT)** for long-term spatiotemporal prediction across various scientific and engineering applications such as **crack propagation in composite material**, **3D reaction diffusion**, **unsteady flow** and **climate science**. The framework trains a **cGAN model** to generate synthetic data and a **Vision Transformer (ViT)** model to predict spatiotemporal dynamics over time as shown **Figure 1**.. The models are designed to handle large spatial and temporal data, making them suitable for tasks involving **scientific simulations** and **real-world predictions** as shown **Figure 2**..
 ![CoverLetterF](https://github.com/user-attachments/assets/8d87ca89-d827-4ccf-ac5b-1c7a75bff6f9)
@@ -69,4 +70,3 @@ project/
 ## Summary of optimized DynamicGPT's architecture
 ![Supple figure 8](https://github.com/user-attachments/assets/a0adf687-b44c-465e-807c-07906529bb97)
 
-![License](https://img.shields.io/badge/license-MIT-green)
